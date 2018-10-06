@@ -1,0 +1,64 @@
+<view class="divider"></view>
+<view class="cell">
+  <view>
+    <view class="tel">
+      <text>收货人:xxx</text>
+      <text>12345678977</text>
+    </view >
+    <text class="address arrow">收货地址:北京市海淀区万寿路西街</text>
+  </view>
+  <image src="/assets/icons/border.png" class="bottom"></image>
+</view>
+<view class="divider"></view>
+<!--商品清单-->
+<view class="cell">
+  <view class="cell-item">
+    <text class="prodlist">商品清单</text>
+  </view>
+  <view class="prod">
+    <image src="{{orderlist.sm_url}}" class="prodimg"></image>
+    <view class="order-detail">
+      <text>¥{{orderlist.prod_price}}</text>
+      <text>已选:{{orderlist.prod_title}}</text>
+    </view>
+    <view class="count"><text>X{{count}}</text></view>
+  </view>
+</view>
+
+<view class="divider"></view>
+<!--支付方式-->
+<view class="cell">
+  <view class="cell-item"><text class="pay-method">支付方式</text></view>
+  <view class="paylist">
+    <view class="paylist-item {{onlinepay?'onlinepay':'normal'}}" bindtap='onlinepay'><text>在线支付</text></view>
+    <view class="paylist-item {{huabeipay?'huabeipay':'normal'}}" bindtap='huabeipay'><text>花呗分期</text></view>
+    <view class="paylist-item {{moneypay?'moneypay':'normal'}}" bindtap='moneypay'><text>货到付款</text></view>
+  </view>
+  <view class="pay-item">
+    <view class="pay" wx:if="{{paymethod == 'online'}}"> 支付宝支付,微信支付,银行卡支付,付财通支付等</view>
+    <view class="pay" wx:if="{{paymethod == 'huabei'}}"> 通过花呗分期轻松还款,0首付</view>
+    <view class="pay" wx:if="{{paymethod == 'money'}}">货到再付款,支持现金交易</view>
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell total">
+  <view class="text">
+    <view >商品总金额: </view>
+    <view >运费:</view>
+    <view >赠送积分:</view>
+  </view>
+  <view class="number">
+    <view >¥{{totalPrice}}</view>
+    <view >0.00</view>
+    <view >{{totalPrice}}</view>
+  </view>
+</view>
+<view class="submit">
+    <view class="order-money">
+      <text>订单总金额:</text>
+      <text class="price">¥{{totalPrice}}</text>
+    </view>
+    <view class="buynow">
+      <button class="addOrder" type="warn" size="mini" bindtap='submit'>提交订单</button>
+    </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/message/message.wxml-->
+<!--产品的列表-->
+<view class="card" wx:for="{{messageList}}" wx:key="id">
+  <text class="card-title">{{item.title}}</text>
+  <text class="card-date">{{item.time}}</text>
+  <image src="{{item.img_url}}" mode="aspectFill" class="card-img"></image>
+  <text class="card-desc">{{item.subtitle}}</text>
+  <text class="card-read arrow">详情</text>
+</view>
+
+
+

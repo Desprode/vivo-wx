@@ -1,0 +1,108 @@
+/* pages/profile/profile.wxss */
+/* pages/profile/profile.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.avatar{
+  background-color: #f60;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.avatar image{
+  width: 200rpx;
+  height: 200rpx;
+  border: 10rpx solid rgba(0,0,0,.3);
+  border-radius: 50%;  /*圆形*/
+}
+/*第四个功能*/
+.cell{
+  margin:0rpx 20rpx;
+  background-color: #fff;
+}
+.cell-item{
+  font-size:18px;
+  border-bottom: 1rpx solid #ccc;
+  padding:20rpx; 
+}
+
+
+
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.bg-gray{
+    background-color: #ccc!important;
+    border-bottom: 1rpx solid  #fff!important;
+}
+
+.li .icon-xiala ,.icon-shangjiantou {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+
+.red {
+  color: #fe2e2e;
+}
+
+/*小箭头*/
+.arrow1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20rpx;
+}
+.arrow1::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top:3rpx solid #ccc;
+  border-right:3rpx solid #ccc;
+  transform: rotate(135deg);
+}
+
+.arrow2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    margin-top:20rpx;
+}
+.arrow2::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top:3rpx solid #ccc;
+  border-right:3rpx solid #ccc;
+  transform: rotate(-45deg);
+}

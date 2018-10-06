@@ -1,0 +1,47 @@
+<!--pages/shoplist/shoplist.wxml-->
+<view class="slider">
+  <swiper autoplay interval='3500'indicator-dots="{{true}}">
+    <swiper-item>
+      <!--设置宽度 高度 等比例缩放-->
+      <image src="{{shopList.sm_url}}" width="375" height="150" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <!--设置宽度 高度 等比例缩放-->
+      <image src="{{shopList.md_url}}" width="375" height="150" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <!--设置宽度 高度 等比例缩放-->
+      <image src="{{shopList.lg_url}}" width="375" height="150" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="prod">
+  <text class="prod-title arrow">{{shopList.prod_title}}</text>
+  <text class="prod-detail">{{shopList.prod_detail}}</text>
+  <text class="prod-price">¥{{shopList.prod_price}}.00</text>
+</view>
+<view class="prod-count arrow">
+  <text>数量</text>
+    <view class="tui-num-group">
+      <button bindtap="reduce" class="tui-num-cell">-</button>
+      <input type='number' value="{{count}}" class="tui-num-cell"></input>
+      <button bindtap="add" class="tui-num-cell">+</button>
+    </view>
+</view>
+<view class="buy-type arrow">
+  <text class="yixuan">已选</text>
+  <text class="type">{{shopList.prod_type}}</text>
+</view>
+<view class="promise arrow">
+  <text class="promise-item">顺丰极速达</text>
+  <text class="promise-item">30天包换</text>
+  <text class="promise-item">全国联保</text>
+</view>
+<view class="add">
+  <image src="/assets/icons/fav.png" class="fav" bindtap='shoucang'></image>
+  <image src="/assets/icons/kefu.png"></image>
+  <image src="/assets/icons/cart.png" bindtap='jumpCart'></image>
+  <button class="addCart" size="mini" bindtap='addcart'>加入购物车</button>
+  <button class="addOrder" type="warn" size="mini" bindtap='jumpOrderlist' >立即购买</button>
+</view>
+

@@ -1,0 +1,65 @@
+/*轮播图 BUG:高度:默认100%*/
+/*即使image设置390rpx也需单独设置*/
+.slider,
+.slider image,
+.slider swiper
+{
+  width:100%;
+  height: 390rpx;
+  
+}
+.index-nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*============================商品详情================================*/
+.index{
+  margin-top:20rpx; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-item{
+  margin:20rpx 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.index-prod{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+}
+.prod-img{
+  height:350rpx;
+  width: 100%;
+}
+.prod-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prod-details .prod-title{
+  font-size:16px;
+}
+.prod-details .prod-subtitle{
+  font-size: 12px;
+}
+.prod-details .prod-price{
+  font-size:14px;
+  color:red;
+}
+.prod-details button{
+  font-size:12px;
+  padding: 0;
+  margin: 0;
+  width:140rpx;
+}

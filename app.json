@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/profile/profile",
+    
+    "pages/cart/cart",
+    "pages/address/address",
+    "pages/orderlist/orderlist",
+    
+    "pages/shoplist/shoplist",
+    "pages/logs/logs",
+    
+    "pages/orderlist2/orderlist2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "vivo旗舰店",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#f00",
+    "borderStyle": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/tabs/home.png",
+        "selectedIconPath": "/assets/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "社区",
+        "iconPath": "/assets/tabs/message.png",
+        "selectedIconPath": "/assets/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "选购",
+        "iconPath": "/assets/tabs/contact.png",
+        "selectedIconPath": "/assets/tabs/contact-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/tabs/profile.png",
+        "selectedIconPath": "/assets/tabs/profile-active.png"
+      }
+    ]
+  }
+}

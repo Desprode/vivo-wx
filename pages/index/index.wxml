@@ -1,0 +1,61 @@
+<!--图片轮播  组件-->
+<!--尽量使用原生自带的效率好-->
+<view class="slider">
+  <swiper autoplay interval='3500' indicator-dots="{{true}}">
+    <swiper-item  wx:for="{{carouselList}}" wx:key="id">
+      <!--设置宽度 高度 等比例缩放-->
+      <image src="{{item.img_url}}" width="375" height="150" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="divider"></view>
+<!--=======================================================================-->
+<view class="index">
+  <text class="index-nav">全网热销</text>
+  <view class="index-item">
+    <navigator class="index-prod" wx:for="{{hotList}}" wx:key="id" bindtap='jumpshoplist'>
+      <image class="prod-img" src="{{item.sm_url}}" mode="aspectFill" data-tid="{{item.id}}" ></image>
+      <view class="prod-details" data-tid="{{item.id}}" >
+        <text class="prod-title">{{item.title}}</text>
+        <text class="prod-subtitle">{{item.sub_title}}</text>
+        <text class="prod-price">¥{{item.price}}</text>
+        <button type="warn" size="mini" data-tid="{{item.id}}">立即抢购</button>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="divider"></view>
+<!--========================================================================================-->
+<view class="index">
+  <text class="index-nav">时尚爆款</text>
+  <view class="index-item">
+    <navigator class="index-prod" wx:for="{{hotList}}" wx:key="id" bindtap='jumpshoplist'>
+      <image class="prod-img" src="{{item.sm_url}}" mode="aspectFill" data-tid="{{item.id}}" ></image>
+      <view class="prod-details" data-tid="{{item.id}}" >
+        <text class="prod-title">{{item.title}}</text>
+        <text class="prod-subtitle">{{item.sub_title}}</text>
+        <text class="prod-price">¥{{item.price}}</text>
+        <button type="warn" size="mini" data-tid="{{item.id}}">立即抢购</button>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="divider"></view>
+<!--===================================================================-->
+<view class="index">
+  <text class="index-nav">精品配件</text>
+  <view class="index-item">
+    <navigator class="index-prod" wx:for="{{hotList}}" wx:key="id" bindtap='jumpshoplist'>
+      <image class="prod-img" src="{{item.sm_url}}" mode="aspectFill" data-tid="{{item.id}}" ></image>
+      <view class="prod-details" data-tid="{{item.id}}" >
+        <text class="prod-title">{{item.title}}</text>
+        <text class="prod-subtitle">{{item.sub_title}}</text>
+        <text class="prod-price">¥{{item.price}}</text>
+        <button type="warn" size="mini" data-tid="{{item.id}}">立即抢购</button>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="divider"></view>
+
+<view class="loadmore">我可是有底线的...</view>

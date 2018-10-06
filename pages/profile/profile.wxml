@@ -1,0 +1,154 @@
+<!--pages/profile/profile.wxml-->
+<!--pages/profile/profile.wxml-->
+<view class="avatar">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="divider"></view>
+<!--分类 -->
+<view class="cell">
+  <!--个人资料-->
+  <view class="li" data-index="0" bindtap='changeToggle'>
+    <view class="left">个人资料</view>
+    <view class="right">
+      <text class="iconfont {{selectedFlag[0]?'arrow2':'arrow1'}}"></text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[0]}}">
+    <block wx:for="{{list01}}" wx:key="index">
+      <view class="li bg-gray">
+        <view>昵称</view>
+        <view>dingding</view>
+      </view>
+      <view class="li">
+        <view>微信号</view>
+        <view>123456</view>
+      </view>
+      <view class="li">
+        <view>地址</view>
+        <view>北京市</view>
+      </view>
+    </block>
+  </view>
+  <!--我的优惠券-->
+  <view class="li" data-index="1" bindtap='changeToggle'>
+    <view class="left">我的优惠券</view>
+    <view class="right1">
+      <text class="iconfont {{selectedFlag[1]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[1]}}">
+    <block wx:for="{{list02}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>暂无优惠券</view>
+      </view>
+    </block>
+  </view>
+  <view class="divider"></view>
+  <!--我的订单-->
+  <view class="li" data-index="2" bindtap='changeToggle'>
+    <view class="left">我的订单</view>
+    <view class="right red">
+      <text class="iconfont {{selectedFlag[2]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[2]}}">
+    <block wx:for="{{list03}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>订单</view>
+      </view>
+    </block>
+  </view>
+  <!--我的预约-->
+  <view class="li" data-index="3" bindtap='changeToggle'>
+    <view class="left">我的预约</view>
+    <view class="right red">
+      <text class="iconfont {{selectedFlag[3]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[3]}}">
+    <block wx:for="{{list04}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>暂无预约</view>
+        <view></view>
+      </view>
+    </block>
+  </view>
+  <!--退换-->
+  <view class="li" data-index="4" bindtap='changeToggle'>
+    <view class="left">退换</view>
+    <view class="right red">
+      <text class="iconfont {{selectedFlag[3]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[4]}}">
+    <block wx:for="{{list04}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>订单1</view>
+        <view class="red">退换进度</view>
+      </view>
+    </block>
+  </view>
+  <!--售后/反馈-->
+  <view class="li" data-index="5" bindtap='changeToggle'>
+    <view class="left">反馈/售后</view>
+    <view class="right red">
+      <text class="iconfont {{selectedFlag[3]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[5]}}">
+    <block wx:for="{{list04}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>售后</view>
+        <view class="red">详情</view>
+      </view>
+    </block>
+  </view>
+  <view class="divider"></view>
+  <view class="li" data-index="6" bindtap='changeToggle'>
+    <view class="left">设置</view>
+    <view class="right red">
+      <text class="iconfont {{selectedFlag[3]?'arrow2':'arrow1'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[6]}}">
+    <block wx:for="{{list04}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <view>设置</view>
+        <view class="red">音量</view>
+      </view>
+    </block>
+  </view>
+</view>
+<!--
+<view class="cell">
+  <navigator class="cell-item arrow">
+    <text>个人资料</text>
+  </navigator>
+  <navigator class="cell-item arrow">
+    <text>我的优惠券</text>
+  </navigator>
+  <view class="divider"></view>
+  <navigator class="cell-item arrow">
+    <text>我的订单</text>
+  </navigator>
+  <navigator class="cell-item arrow">
+    <text>我的预约</text>
+  </navigator>
+  <navigator class="cell-item arrow">
+    <text>退换</text>
+  </navigator>
+  <navigator class="cell-item arrow">
+    <text>售后/反馈</text>
+  </navigator>
+  <view class="divider"></view>
+  <navigator class="cell-item arrow">
+    <text>设置</text>
+  </navigator>
+</view>
+-->

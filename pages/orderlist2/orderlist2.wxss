@@ -1,0 +1,127 @@
+/* pages/orderlist2/orderlist2.wxss */
+/* pages/orderlist/orderlist.wxss */
+.tel{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-right:50rpx;
+}
+.address{
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top:30rpx;
+}
+.bottom{
+  width:100%;
+  height: 20rpx;
+  margin-top:-50rpx;
+} 
+/*商品清单*/
+.prodlist{
+  font-size: 16px;
+}
+.prod{
+  display: flex;
+  justify-content: space-between
+}
+.prodimg{
+  width:220rpx;
+  height: 220rpx;
+}
+.order-detail{
+  display: flex;
+  flex-direction: column;
+  margin-top:50rpx;
+  font-size:16px;
+}
+.count{
+  margin-top:50rpx;
+  font-weight: lighter;
+}
+/*支付方式===>判断哪种方式被选中,被选中的方式样式改变*/
+.pay-method{
+  font-size: 16px;
+}
+.paylist{
+  display: flex;
+  justify-content: space-between;
+  margin:10rpx;
+}
+/*通用样式*/
+.paylist-item{
+  font-size:14px;
+  padding:10rpx;
+  font-weight: lighter;
+  margin:30rpx 0;
+}
+/*备选中时的样式*/
+.onlinepay {
+  border:1rpx solid #aaa;
+  color:#000;
+  background-color: #fff;
+}
+.huabeipay {
+  border:1rpx solid #aaa;
+  color:#000;
+  background-color: #fff;
+}
+.moneypay {
+  border:1rpx solid #aaa;
+  color:#000;
+  background-color: #fff;
+}
+/*未被选中时的样式*/
+.normal{
+  border:1rpx solid #ccc;
+  color:#333;
+  background-color: #F0F1EC;
+}
+/*被选中时下面详细信息的样式*/
+.pay{
+  border:1rpx solid #ccc;
+  font-size:14px;
+  width:100%;
+  padding:10rpx 0;
+  padding-left: 10rpx;
+  margin-bottom: 30rpx;
+}
+/*总计样式*/
+.total{
+  margin-top:50rpx;
+  font-size:16px;
+  display: flex;
+  margin-bottom: 80rpx;
+}
+.text view{
+  margin-top:10rpx;
+  color:#aaa;
+}
+.number{
+  margin-left:50rpx;
+}
+.number view{
+  margin-top:10rpx;
+}
+/*提交*/
+.submit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom:0rpx;
+  background:#fff;
+  width:100%;
+}
+.order-money{
+  font-size:16px;
+  margin-left:40rpx;
+  
+}
+.order-money .price{
+  margin-left:30rpx;
+  color:red;
+  font-size:18px;
+}
+.buynow{
+  margin-left: 160rpx;
+}

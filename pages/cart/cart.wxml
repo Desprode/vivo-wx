@@ -1,0 +1,51 @@
+
+<view class="divider"></view>
+<!-- wx:for 渲染购物车列表 -->
+<view class="cell mb" wx:for="{{carts}}" wx:key="id">
+  <view class="cart">
+       <!-- wx:if 是否选择显示不同图标 -->
+        <icon wx:if="{{item.selected}}" type="circle" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="success" bindtap="selectList" data-index="{{index}}"/>
+  <!--
+    <label class="checkbox" bindchange="isChecked" selected>
+      <checkbox></checkbox>
+    </label>
+    -->
+    <view url="#">
+      <image src="{{item.sm_url}}" class="prodimg"></image>
+    </view>
+    <view class="prodinfo">
+      <text class="prodinfo-item">{{item.prod_title}}</text>
+      <text class="prodinfo-item">型号:{{item.prod_type}}</text>
+      <text class="prodinfo-item">¥{{item.prod_price}}</text>
+    </view>
+    <image src="/assets/icons/delete.png" class="delete" bindtap="deleteList" data-index="{{index}}"></image>
+  </view>
+  <!-- 增加减少数量按钮 -->
+  <view class="tui-num-group">
+    <button bindtap="minusCount" class="tui-num-cell" data-index="{{index}}">-</button>
+    <text class="tui-num-cell">{{item.num}}</text>
+    <button bindtap="addCount" class="tui-num-cell" data-index="{{index}}">+</button>
+  </view>   
+</view>
+<!-- 底部操作栏 -->
+<view class="cal">
+  <label class="checkbox">
+    <!-- wx:if 是否全选显示不同图标 -->
+    <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" bindtap="selectAll"/>
+    <icon wx:else type="circle" color="#aaa" bindtap="selectAll"/>
+    <text>全选</text>
+    <!--
+    <checkbox></checkbox>全选
+    -->
+  </label>
+  <view class="total">
+    <text>合计:<text class="price">¥{{totalPrice}}</text></text>
+  </view>
+  <view>
+     <button class="gocal" type="warn" size="mini" bindtap='jumpOrderlist'>去结算</button>
+  </view>
+</view>
+
+
+
